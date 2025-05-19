@@ -16,7 +16,7 @@ long long int bswap64(long long int x) {
 
 int main(int argc, char *argv[]) {
 	if (argc < 2) {
-		printf("hexfind ver 20250509 by Yoti\n");
+		printf("hexfind ver 20250519 by Yoti\n");
 		printf("usage: in_file pattern_value\n");
 		return 1;
 	}
@@ -49,8 +49,8 @@ int main(int argc, char *argv[]) {
 	pl = strlen(argv[2]) / 2;
 
 	for (i = 0; i < (fl - pl); i++) {
-		fread(&t, 8, 1, fp);
-		fseek(fp, -7, SEEK_CUR);
+		fread(&t, 1, pl, fp);
+		fseek(fp, -(pl-1), SEEK_CUR);
 		if (t == p) {
 			printf("%X", ftell(fp) - 1);
 			break;

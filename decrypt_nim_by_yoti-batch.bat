@@ -1,7 +1,7 @@
 @echo off
 setlocal EnableDelayedExpansion
-title Decrypt NIM module script by Yoti (v20250508)
-echo Decrypt NIM module script by Yoti (v20250508)
+title Decrypt NIM module script by Yoti (v20250519)
+echo Decrypt NIM module script by Yoti (v20250519)
 
 if not exist hactool.exe goto hactoolexe
 if not exist hexfind.exe goto hexfindexe
@@ -48,6 +48,7 @@ rem			echo @flag offset_shift 0x100>>..\%%d.pchtxt
 			echo // null out function pointer for abort>>..\%%d.pchtxt
 			echo @enabled>>..\%%d.pchtxt
 rem			set /a "offtxt=0x!off!-0x100"
+rem			Does not works because of CMD decimal output
 rem			echo 00!offtxt! E2031FAA>>..\%%d.pchtxt
 			echo 00!off! E2031FAA>>..\%%d.pchtxt
 		)
@@ -55,8 +56,6 @@ rem			echo 00!offtxt! E2031FAA>>..\%%d.pchtxt
 
 	cd ..
 )
-
-
 goto thisistheend
 
 :hactoolexe
