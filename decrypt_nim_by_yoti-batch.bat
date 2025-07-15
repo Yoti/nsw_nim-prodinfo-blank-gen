@@ -35,6 +35,7 @@ rem				echo !bid:~36,40!>0_%%~nf\bid.txt
 				set /p off=<0_%%~nf\off.txt
 				del /q 0_%%~nf\off.txt
 				..\makeips.exe 0_%%~nf\!bid:~36,40! !off! E2031FAA
+				copy /b 0_%%~nf\!bid:~36,40!.ips ..\>nul
 			)
 
 			echo @nsobid-!bid:~36,40!>..\%%d.pchtxt
