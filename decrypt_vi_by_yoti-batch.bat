@@ -13,8 +13,8 @@ for /d %%d in (??.?.?) do (
 	cd %%d
 
 	for %%f in (????????????????????????????????.nca) do (
-		..\hactool.exe -i -k ..\prod.keys --disablekeywarns -t nca %%f | find "Title Name:                     usb" >nul && (
-			echo 9_%%~nf [USB]
+		..\hactool.exe -i -k ..\prod.keys --disablekeywarns -t nca %%f | find "Title Name:                     vi" >nul && (
+			echo 9_%%~nf [VI]
 
 			if exist 9_%%~nf rd /s /q 9_%%~nf
 

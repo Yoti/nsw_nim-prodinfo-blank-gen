@@ -52,6 +52,8 @@ rem			set /a "offtxt=0x!off!-0x100"
 rem			Does not works because of CMD decimal output
 rem			echo 00!offtxt! E2031FAA>>..\%%d.pchtxt
 			echo 00!off! E2031FAA>>..\%%d.pchtxt
+
+			goto :thisistheend
 		)
 	)
 
