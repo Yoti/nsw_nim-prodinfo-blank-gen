@@ -1,7 +1,7 @@
 @echo off
 setlocal EnableDelayedExpansion
-title Decrypt USB module script by Yoti (v20250729)
-echo Decrypt USB module script by Yoti (v20250729)
+title Decrypt VI module script by Yoti (v20250901)
+echo Decrypt VI module script by Yoti (v20250901)
 
 if not exist hactool.exe goto hactoolexe
 if not exist prod.keys goto prodkeys
@@ -26,7 +26,6 @@ for /d %%d in (??.?.?) do (
 				echo !bid:~36,40!
 rem				echo !bid:~36,40!>9_%%~nf\bid.txt
 				del /q 9_%%~nf\bid.txt
-				goto :thisistheend
 			)
 		)
 	)
